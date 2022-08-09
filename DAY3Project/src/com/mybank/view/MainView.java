@@ -6,7 +6,7 @@ public class MainView {
 	{
 		LoanAccountService Interest1 = new LoanAccountService();
 		int Interest = Interest1.calculateInterest(126, 10000, 6, 4);
-		System.out.println("Interest is :"+ Interest);
+		System.out.println("Interest for loan ID "+Interest1.getLoanId()+" is "+ Interest);
 	}
 
 }

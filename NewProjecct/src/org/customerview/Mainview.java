@@ -3,7 +3,6 @@ import org.Customer.Customer;
 import org.Customer.Product;
 public class Mainview {
 	
-	private static Mainview Model1;
 
 	int getCustomerIdFromCustomer(Customer Custobj1) {
 		int CustId =Custobj1.getCustomerId();
@@ -15,9 +14,18 @@ public class Mainview {
 		return product1Name;
 	}
 	
+	String getCustNameFromCustId(int CustId) {
+		String name = "ABC";
+		return name;
+	}
+	
 	int Doubleprice (int price) {
 		return 2*price;
 	}
+	
+	
+	
+	
 
 	public static void main(String[] args) {
 		//1
@@ -33,11 +41,16 @@ public class Mainview {
 		String Pname = ProductNM.getProductName(Product1);
 		System.out.println("2. Product name :"+Pname);
 		
+		//3
+		Mainview Customername = new Mainview();
+		String CustnamE= Customername.getCustNameFromCustId(CustID);
+		System.out.println("3.CustomerName : "+ CustnamE);
+		
 		//4
 		Product Product2 = new Product (1 , 5000 , "Amron");
-		Mainview.Model1 = new Mainview();
+		Mainview PctPrc = new Mainview();
 		int price = Product2.getPrice();
-		int NewPrice=Model1.Doubleprice(price);
+		int NewPrice=PctPrc.Doubleprice(price);
 		
 		System.out.println("4.DoublePrice : "+NewPrice);
 		
